@@ -5,17 +5,20 @@
 ---
 
 <a name="中文"></a>
+
 ## 中文
 
-### 项目简介
+### 📖 项目简介
 
 本项目基于 [Vulhub](https://github.com/vulhub/vulhub) 的 Struts2 漏洞靶场进行修改，主要解决以下问题：
 
-1. **适配最新 Linux 系统** - 使用 Eclipse Temurin JDK 替代过时的 OpenJDK，解决 glibc 兼容性问题
-2. **完全离线运行** - 内置所有依赖文件（JDK镜像、Tomcat、War文件），无需网络即可构建和运行
-3. **避免网络问题** - 解决原版因网络问题导致无法启动靶场的问题
+| 特性 | 说明 |
+|------|------|
+| 🔧 **适配最新系统** | 使用 Eclipse Temurin JDK 替代过时的 OpenJDK，解决 glibc 兼容性问题 |
+| 📦 **完全离线运行** | 内置所有依赖文件（JDK镜像、Tomcat、War文件），无需网络即可构建和运行 |
+| 🚀 **避免网络问题** | 解决原版因网络问题导致无法启动靶场的问题 |
 
-### 包含漏洞
+### 📋 包含漏洞
 
 | 靶场 | 漏洞名称 | Struts2版本 |
 |------|----------|-------------|
@@ -40,7 +43,7 @@
 | s2-066 | 文件上传路径穿越 | 2.0.0-2.5.30 |
 | s2-067 | 文件上传路径穿越 | 2.0.0-2.5.30 |
 
-### 快速开始（完全离线）
+### 🚀 快速开始（完全离线）
 
 ```bash
 # 1. 进入项目目录
@@ -58,7 +61,7 @@ docker compose up -d
 # 浏览器打开 http://localhost:8080
 ```
 
-### 目录结构
+### 📁 目录结构
 
 ```
 struts2/
@@ -75,7 +78,7 @@ struts2/
 └── README.md
 ```
 
-### 常用命令
+### 💻 常用命令
 
 ```bash
 docker compose up -d        # 启动靶场
@@ -84,7 +87,7 @@ docker compose down         # 停止靶场
 docker compose up -d --build # 重新构建
 ```
 
-### 与原版 Vulhub 的区别
+### 🔄 与原版 Vulhub 的区别
 
 | 项目 | 原版 Vulhub | 本项目 |
 |------|-------------|--------|
@@ -95,7 +98,19 @@ docker compose up -d --build # 重新构建
 | 网络依赖 | 需要网络 | 完全离线 |
 | 系统兼容性 | 旧版Linux | 最新Linux/Kali |
 
-### 致谢
+### 📸 运行截图
+
+![S2-001 漏洞页面](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194031722.png)
+
+![S2-001 漏洞测试](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194535445.png)
+
+![S2-001 命令执行](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194651046.png)
+
+![S2-066 文件上传](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194744781.png)
+
+![S2-066 漏洞利用](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322195215533.png)
+
+### 🙏 致谢
 
 - [Vulhub](https://github.com/vulhub/vulhub) - 原始漏洞环境
 - [Apache Struts](https://struts.apache.org/) - Struts2 框架
@@ -104,17 +119,20 @@ docker compose up -d --build # 重新构建
 ---
 
 <a name="english"></a>
+
 ## English
 
-### Introduction
+### 📖 Introduction
 
 This project is a modified version of the [Vulhub](https://github.com/vulhub/vulhub) Struts2 vulnerability range, with the following improvements:
 
-1. **Compatible with latest Linux systems** - Uses Eclipse Temurin JDK instead of outdated OpenJDK to solve glibc compatibility issues
-2. **Fully offline operation** - All dependencies are built-in (JDK images, Tomcat, War files), no network required to build and run
-3. **Avoid network issues** - Solves the problem of unable to start the range due to network issues in the original version
+| Feature | Description |
+|---------|-------------|
+| 🔧 **Compatible with latest systems** | Uses Eclipse Temurin JDK instead of outdated OpenJDK to solve glibc compatibility issues |
+| 📦 **Fully offline operation** | All dependencies are built-in (JDK images, Tomcat, War files), no network required |
+| 🚀 **Avoid network issues** | Solves the problem of unable to start the range due to network issues |
 
-### Included Vulnerabilities
+### 📋 Included Vulnerabilities
 
 | Range | Vulnerability | Struts2 Version |
 |-------|---------------|-----------------|
@@ -139,7 +157,7 @@ This project is a modified version of the [Vulhub](https://github.com/vulhub/vul
 | s2-066 | File Upload Path Traversal | 2.0.0-2.5.30 |
 | s2-067 | File Upload Path Traversal | 2.0.0-2.5.30 |
 
-### Quick Start (Fully Offline)
+### 🚀 Quick Start (Fully Offline)
 
 ```bash
 # 1. Enter project directory
@@ -157,7 +175,7 @@ docker compose up -d
 # Open browser at http://localhost:8080
 ```
 
-### Directory Structure
+### 📁 Directory Structure
 
 ```
 struts2/
@@ -174,7 +192,7 @@ struts2/
 └── README.md
 ```
 
-### Common Commands
+### 💻 Common Commands
 
 ```bash
 docker compose up -d        # Start range
@@ -183,7 +201,7 @@ docker compose down         # Stop range
 docker compose up -d --build # Rebuild
 ```
 
-### Differences from Original Vulhub
+### 🔄 Differences from Original Vulhub
 
 | Item | Original Vulhub | This Project |
 |------|-----------------|--------------|
@@ -194,7 +212,19 @@ docker compose up -d --build # Rebuild
 | Network dependency | Required | Fully offline |
 | System compatibility | Old Linux | Latest Linux/Kali |
 
-### Acknowledgments
+### 📸 Screenshots
+
+![S2-001 Vulnerability Page](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194031722.png)
+
+![S2-001 Vulnerability Test](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194535445.png)
+
+![S2-001 Command Execution](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194651046.png)
+
+![S2-066 File Upload](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322194744781.png)
+
+![S2-066 Exploitation](https://cdn.jsdelivr.net/gh/dyfawa4/dyfawa4.github.io@main/img/image-20260322195215533.png)
+
+### 🙏 Acknowledgments
 
 - [Vulhub](https://github.com/vulhub/vulhub) - Original vulnerability environment
 - [Apache Struts](https://struts.apache.org/) - Struts2 framework
@@ -202,6 +232,6 @@ docker compose up -d --build # Rebuild
 
 ---
 
-## License
+## 📄 License
 
 This project is for educational purposes only. Use at your own risk.
