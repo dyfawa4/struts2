@@ -1,0 +1,7 @@
+services:
+  struts2:
+    build:
+      context: ..
+      dockerfile: s2-012/Dockerfile
+    ports:
+      - "8080:8080"
