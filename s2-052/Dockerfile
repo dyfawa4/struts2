@@ -1,3 +1,9 @@
 FROM struts2-tomcat-base:8.5.100
 
-COPY s2-052/struts2-rest-showcase.war $CATALINA_HOME/webapps/ROOT.war
+COPY s2-052/struts2-rest-showcase.war /tmp/ROOT.war
+
+RUN set -ex \
+    && mkdir -p $CATALINA_HOME/webapps/ROOT \
+    && cd $CATALINA_HOME/webapps/ROOT \
+    && jar -xf /tmp/ROOT.war \
+    && rm /tmp/ROOT.war
